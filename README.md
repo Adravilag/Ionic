@@ -1,10 +1,10 @@
 # Ionic
  
-* Generar un proyecto nuevo con el CLI de Ionic
+* Generar un proyecto nuevo con el CLI de Ionic, con esto estamos creando un nuevo proyecto de Ionic 4 para realización de un app basado en Angular.
+
 ```
 ionic start Focus360Angular blank --type=angular
 ```
-Con esto estamos creando un nuevo proyecto de Ionic 4 para realización de un app basado en Angular
 
 * Generar una página donde mostrar el listado de usuarios
 ```
