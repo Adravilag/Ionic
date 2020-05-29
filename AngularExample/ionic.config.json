@@ -1,0 +1,7 @@
+{
+  "name": "Focus360Angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

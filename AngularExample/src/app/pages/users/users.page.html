@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item button *ngFor = "let item of (results | async)" [routerLink]="['/','users',item.id]">
+      
+      <ion-avatar slot="start">
+        <img [src]="item.avatar" *ngIf="item.avatar != ''">
+      </ion-avatar>
+      
+      <ion-label text-wrap>
+        <h3>{{ item.first_name }} {{ item.last_name }}</h3>
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
