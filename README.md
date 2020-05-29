@@ -40,9 +40,9 @@ https://reqres.in/api/users
 
 * Añadimos los SIGUIENTE módulos módulos:
 ```
-	import { HttpClient } from '@angular/common/http'; (para lanzar peticiones a la API)
-	import { Observable } from 'rxjs'; (Para declarar método observador a un método)
-	import { map } from 'rxjs/operators'; (para crear una estructura de datos del tipo mapa/hash)
+	import { HttpClient } from '@angular/common/http'; // para lanzar peticiones a la API
+	import { Observable } from 'rxjs'; // Para declarar método observador a un método
+	import { map } from 'rxjs/operators'; // para crear una estructura de datos del tipo mapa/hash
 ```
 
 * Añadimos un parámetro http al constructor
