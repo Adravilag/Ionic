@@ -1,7 +1,6 @@
 import { UserService } from './../../services/user.service'
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { SearchType } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-users',
@@ -13,9 +12,11 @@ export class UsersPage implements OnInit {
   // Resultado de la búsqueda
   results: Observable<any>;
 
+  // Constructor de UsersPage
   constructor(private userService: UserService) { }
 
+  // Inicialización
   ngOnInit() {
-    this.results = this.userService.allData();
+    this.results = this.userService.getUsers();
   }
 }
