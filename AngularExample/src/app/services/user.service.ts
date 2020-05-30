@@ -13,11 +13,10 @@ export class UserService {
   // Constructor de UserService (@param: http) 
   constructor(private http: HttpClient) { }
 
-  // Método getAllUsers
+  // Método observador getUsers
   getUsers(): Observable<any> {
     return this.http.get(`${this.url}`).pipe(
       map(results => {
-        console.log('RAW', results);
         return results['data'];
       })
     );
