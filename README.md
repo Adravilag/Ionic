@@ -33,12 +33,12 @@ a la ruta de 'user' en lugar de 'home'
 
 * Cambiamos el path: 'user-details' por user/:id. Ya que con esto obtenemos los detalles de los usuarios a partir de la clave, es decir, por su ID.
 
-* Vamos ahora al fichero de services/user.services.ts, añadimos una variable url para el enlace del API REST:
+* Vamos ahora al fichero de services/user.services.ts, añadimos una variable url para el enlace del API REST dentro de la clase UserService:
 ```
 https://reqres.in/api/users
 ```
 
-* Añadimos los SIGUIENTE módulos módulos:
+* Añadimos los siguientes módulos:
 ```
 	import { HttpClient } from '@angular/common/http'; // para lanzar peticiones a la API
 	import { Observable } from 'rxjs'; // Para declarar método observador a un método
@@ -51,3 +51,17 @@ https://reqres.in/api/users
 ```
 
 * Creamos dos métodos, uno para mostra todos los usuarios y otro para mostrar información a partir de un identificador.
+```
+  getUsers(): Observable<any> {
+    return this.http.get(`${this.url}`).pipe(
+      map(results => {
+        return results;
+      })
+    );
+  }
+  ```
+```
+  getDetails(id) {
+    return this.http.get(`${this.url}${id}`);
+  }
+```
